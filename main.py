@@ -9,10 +9,15 @@ s_btn = form.form_submit_button("Short")
 
 def copying():
     pyperclip.copy(shorted_url)
+    st.success('Copied to your Clipboard', icon="✅")
 
 shortener = pyst.Shortener()
-if s_btn:
-    shorted_url = shortener.tinyurl.short(url)
-    st.markdown("<h3>Shorted URL</h3>", unsafe_allow_html=True)
-    st.markdown(f"<h6 style='text-align: center;'>{shorted_url}</h6>", unsafe_allow_html=True)
-    st.button("Copy", on_click=copying)
+try:
+    if s_btn:
+        shorted_url = shortener.tinyurl.short(url)
+        st.markdown("<h3>Shorted URL</h3>", unsafe_allow_html=True)
+        st.markdown(f"<h6 style='text-align: center;'>{shorted_url}</h6>", unsafe_allow_html=True)
+        copy = st.button("Copy", on_click=copying)
+
+except:
+    st.warning('Please enter a valid URL', icon="⚠️")
