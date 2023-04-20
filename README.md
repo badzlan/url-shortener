@@ -1,7 +1,7 @@
 <p align="center"><a href="https://streamlit.io/" target="_blank"><img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="400" alt="Streamlit Logo"></a></p>
 
 # Project Overview
-URL Shortener Web App using Python Streamlit
+URL Shortener Web App using python streamlit
 
 Project Link : https://url-shortener.streamlit.app/
 
